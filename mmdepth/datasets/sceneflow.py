@@ -1,7 +1,5 @@
 from typing import List, Union, Optional, Sequence, Callable
 
-from natsort import natsorted
-
 from mmengine.fileio import join_path, exists, list_from_file
 from mmdepth.registry import DATASETS
 from mmdepth.utils import natsort_iglob, equal_nonempty_length
