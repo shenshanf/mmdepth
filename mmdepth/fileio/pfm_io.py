@@ -3,6 +3,11 @@
 # This code is modified from https://github.com/MartinPeris/justPFM
 # which is available under the MIT License.
 
+# Extended functionality:
+# - Added support for conversion between PFM and bytes streams
+# - Integrated with mmengine.fileio to enable storage of bytes data
+#   across different storage backends
+
 from math import isclose
 from pathlib import Path
 from sys import byteorder
