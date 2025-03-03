@@ -1,0 +1,21 @@
+mmengine==0.10.5
+numpy~=2.0.2
+setuptools==60.2.0
+mmcv==2.2.0
+opencv-python==4.10.0.84
+mmeval==0.2.1
+
+matplotlib~=3.9.4
+python==3.9.0
+pytorch==2.4.1 torchvision==0.19.1 torchaudio==2.4.1 pytorch-cuda=12.1
+
+pytest==8.3.4
+taichi~=1.7.3
+albumentations~=1.4.24
+torch~=2.4.1
+triton~=3.0.0
+multipledispatch~=1.0.0
+kornia~=0.7.4
+einops~=0.8.0
+multimethod~=2.0
+Deprecated~=1.2.18

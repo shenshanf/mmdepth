@@ -1,0 +1,13 @@
+include requirements/*.txt
+include LICENSE
+include README.md
+include CONTRIBUTING.md
+include mmdepth/.mim/model-index.yml
+include mmdepth/.mim/demo/*/*
+recursive-include mmdepth/.mim/configs *.py *.yml
+recursive-include mmdepth/.mim/tools *.sh *.py
+recursive-include configs *.py *.yml
+recursive-include demo *.py *.sh
+recursive-include docs *.md *.rst *.txt *.png *.jpg *.gif
+recursive-include resources *.png *.jpg *.gif
+recursive-include tools *.py *.sh
