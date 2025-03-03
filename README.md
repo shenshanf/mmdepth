@@ -14,6 +14,44 @@ We are actively looking for collaborators who are passionate about depth estimat
 - Comprehensive benchmarking on standard datasets
 - Detailed documentation and tutorials
 
+## Project File Structures
+the project structure is designed following established practices from the OpenMMLab ecosystem, particularly referencing:
+
+- [MMEngine Template](https://github.com/open-mmlab/mmengine-template): Provides the foundational modular design pattern
+- [MMDetection](https://github.com/open-mmlab/mmdetection): For task-specific organization patterns
+
+This structure follows a modular, registry-based design that enables flexibility and extensibility. 
+The organization separates core components (models, datasets, evaluation metrics) while maintaining a consistent interface between modules. 
+This approach facilitates easy integration of new algorithms, datasets, and metrics while ensuring backward compatibility.
+
+```text
+│   ├── version.py            # Version information
+│   ├── datasets/             # Dataset loading and processing utilities
+│   │   ├── pipline/          # Data processing pipelines
+│   ├── engine/               # Core runtime components
+│   │   ├── hook/             # Training/validation process hooks
+│   │   ├── logging/          # Logging utilities
+│   ├── evaluation/           # Evaluation tools
+│   │   ├── metrics/          # Evaluation metrics
+│   ├── fileio/               # File I/O handlers for various formats
+│   ├── infer/                # Inference tools and utilities
+│   ├── models/               # Model implementations
+│   │   ├── mono_depth/       # Monocular depth estimation models
+│   │   ├── mvstereo/         # Multi-view stereo models
+│   │   ├── stereo/           # Stereo matching models
+│   ├── registry/             # Component registry system
+│   ├── structures/           # Data structures for depth representation
+│   ├── tests/                # Unit tests
+│   ├── utils/                # Utility functions
+│   ├── visualization/        # Visualization tools
+```
+You can generate the complete project structure tree using:
+```bash
+python /mmdepth/tools/gen_dirtree.py --project_path /path/to/project --output_file project_tree.txt
+```
+
+
+
 ## License
 
 This project is released under the [Apache 2.0 license](LICENSE).
