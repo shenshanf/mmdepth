@@ -1,0 +1,44 @@
+name: Auto Changelog
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  generate_changelog:
+    name: Generate Changelog
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+      
+      - name: Install conventional-changelog-cli
+        run: npm install -g conventional-changelog-cli
+      
+      - name: Generate CHANGELOG.md
+        run: |
+          conventional-changelog -p angular -i CHANGELOG.md -s -r 2
+          cat CHANGELOG.md
+      
+      - name: Commit CHANGELOG.md
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: "docs: update CHANGELOG.md for ${{ github.ref_name }}"
+          file_pattern: CHANGELOG.md
+      
+      - name: Create GitHub Release
+        uses: softprops/action-gh-release@v1
+        with:
+          body_path: CHANGELOG.md
+          draft: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
