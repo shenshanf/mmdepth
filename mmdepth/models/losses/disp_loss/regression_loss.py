@@ -4,7 +4,7 @@ import torch
 from mmengine.model import BaseModule
 from torch import nn as nn
 
-from mmdepth.structures import DispMap
+from mmdepth.models.structures import DispMap
 from mmdepth.models.modules.bricks import build_loss
 from mmdepth.registry import LOSSES, MODELS
 

@@ -8,7 +8,7 @@ from mmdepth.models.modules.bricks import build_loss
 from mmdepth.models.modules.opts import WarpOpt2D
 from mmdepth.registry import LOSSES
 
-from mmdepth.structures import DispMap
+from mmdepth.models.structures import DispMap
 
 
 @LOSSES.register_module()
