@@ -6,7 +6,7 @@ import torch.nn.functional as F
 from mmengine.model import BaseModule
 from kornia.filters import SpatialGradient
 
-from mmdepth.structures import DispMap
+from mmdepth.models.structures import DispMap
 from mmdepth.registry import LOSSES
 
 
