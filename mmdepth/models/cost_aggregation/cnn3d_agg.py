@@ -7,8 +7,7 @@ from torch import nn as nn
 from mmdepth.registry import AGGREGATORS
 
 from .hourglass import GCHourGlass, GCSkipBlock, NLAMHourGlass, StackPSMHourGlass, StackGWCHourGlass
-from ..bricks import BasicBlock
-from mmdepth.models.modules.opts import SpatialInterpol
+from ..modules import BasicBlock, SpatialInterpol
 
 
 @AGGREGATORS.register_module()

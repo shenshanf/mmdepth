@@ -5,7 +5,7 @@ import torch.nn as nn
 from mmengine.model import BaseModule, ModuleList
 from ..cost_vol_builder import CostVolSliceYield
 
-from ..bricks import StackedConvGRUCell
+from ..modules import StackedConvGRUCell
 
 from mmdepth.registry import AGGREGATORS
 

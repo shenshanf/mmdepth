@@ -2,7 +2,7 @@ from mmcv.cnn import ConvModule
 from mmengine.model import ModuleList, BaseModule
 
 from mmdepth.models.modules.bricks import BaseUNet
-from mmdepth.models.modules.cost_aggregation.hourglass.psmnet import PSMDecoder, PSMEncoder
+from .psmnet import PSMDecoder, PSMEncoder
 from mmdepth.registry import AGGREGATORS
 
 

@@ -8,7 +8,7 @@ from mmcv.cnn import ConvModule
 
 from mmdepth.registry import AGGREGATORS
 
-from ..bricks import Bottleneck as _Bottleneck
+from ..modules import Bottleneck as _Bottleneck
 
 
 class Bottleneck(_Bottleneck):
