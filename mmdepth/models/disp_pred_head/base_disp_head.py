@@ -1,10 +1,6 @@
 from abc import ABC, abstractmethod
 from typing import Union, List, Optional, Any
-
-import torch
-import torch.nn as nn
 from mmengine.model import BaseModule
-from mmdepth.registry import BACKBONES, NECKS, PREDICT_HEADERS
 
 
 class BaseDispHead(BaseModule, ABC):

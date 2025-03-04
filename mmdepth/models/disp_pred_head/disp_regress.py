@@ -2,12 +2,8 @@ from typing import Union, Dict, List
 import torch
 from mmdepth.registry import PREDICT_HEADERS, LOSSES
 from mmdepth.models.structures import CostVolume, DispMap
-from mmengine.model import BaseModule
 from .base_disp_head import BaseDispHead
 from mmdepth.utils import multi_apply
-
-
-# from mmdepth1.models.modules.losses import
 
 
 @PREDICT_HEADERS.register_module()
